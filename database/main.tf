@@ -42,7 +42,7 @@ resource "aws_db_instance" "db" {
   engine                 = "${var.engine}"
   engine_version         = "${var.engine_version}"
   instance_class         = "${var.instance_class}"
-  name                   = "${var.database_name}"
+  db_name                = "${var.database_name}"
   publicly_accessible    = false
   db_subnet_group_name   = aws_db_subnet_group.Groups.name
   vpc_security_group_ids = [aws_security_group.data.id]
